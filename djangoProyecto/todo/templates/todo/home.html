@@ -1,12 +1,16 @@
 {% extends 'todo/layout.html' %}
 {% block content %}
-<div  class=”container”> 
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+<div class="listC" class=”container”> 
     <table class="table table-striped table-dark">
         <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">Tara</th>
-            <th scope="col">Accion</th>
+            <th class="th-sup" scope="col">#</th>
+            <th class="th-sup" scope="col">Comida</th>
+            <th class="th-sup" scope="col">Accion</th>
         </tr>
         </thead>
         <tbody>

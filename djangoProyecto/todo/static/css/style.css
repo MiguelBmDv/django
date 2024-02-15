@@ -1,0 +1,54 @@
+body{
+    background-image: url(https://marketplace.canva.com/EAD2962NKnQ/2/0/1600w/canva-rainbow-gradient-pink-and-purple-virtual-background-_Tcjok-d9b4.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.display-4{
+    color: rgb(0, 0, 0);
+    font-family: "Tourney", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-shadow: 2px 2px 4px rgb(250, 212, 0);
+}
+ 
+.lead{
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
+}
+
+
+.jumbotron {
+    margin-top: 15px;
+    border-radius: 10px;
+    background-image: url(https://marketplace.canva.com/EAFA7Zl1wfs/1/0/1600w/canva-pastel-red-green-illustrative-element-centric-video-background-Rs7EVOqIM2c.jpg);
+    background-size: cover;
+    background-position: center;
+    
+
+}
+
+.listC{
+    width: 60%;
+}
+
+.th-sup{
+    color: rgb(0, 195, 255);
+}
+
+.contP{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#buttonS{
+    border-color: rgb(0, 150, 150);
+    color: rgb(0, 0, 0);
+}
+
+#buttonS:hover{
+    background-color: rgba(0, 255, 255, 0.753);
+}
