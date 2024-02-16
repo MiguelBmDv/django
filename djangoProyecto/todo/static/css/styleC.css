@@ -1,0 +1,126 @@
+body{
+    background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBwgHBw0HBwcHBw0HBwcHBw8ICQcNFREWIhURExMYHTQgGBolJxUVITshMSk3Oj4xFx9LRD86NzYtNTcBCgoKDQ0NDg0NDjIZFRkrNzctLTcrLi0rKy0tKysrKysrKysrKysrNy0rKys3KysrKysrLSsrLSsrKysrKystLf/AABEIALEBHAMBIgACEQEDEQH/xAAaAAADAQEBAQAAAAAAAAAAAAAAAQIDBAUG/8QAIBABAQEBAQEAAQUBAAAAAAAAAAECERIDISIxMlFxE//EABkBAQEBAQEBAAAAAAAAAAAAAAEAAgQDBf/EABYRAQEBAAAAAAAAAAAAAAAAAAARAf/aAAwDAQACEQMRAD8A+mOFFR9GuM4YhxpAz4OIFwuL4OEI4mxrwuJMrEWN7lNyEwuUXLouU3KTnuUXLpuU3ALluU3LquEXATmuU3LpuE3CLmuSuXRcJuAnPcl5dFwm4RY+Rxr5Lyiz4fF+T4EiRUh8PiRSHD4fEQY4fAiHD4aL0OKgkVIayJFSCRUjQEh8OQ+EJ4fFcPhCODjTg4gy8jy18jykwuSuW/keUnPcJuHT4LwE5bhNw6rgrhJyXCbh13CbgFyXCbh1XCbhJy3Cbh1XCbgFy3BXDpuE+UXP5Ly6PKfITLyPLXyXlFnw+L8jiSeDi+DiKODi+FxJ6MipBIqQYBIqQ5FSNApD4cipCCkORUh8ITw+K4fCEeT8r4fEGfkeWnB5SZeS8t/JeQmFyVy6PJeUnPcJuHRclchOa4TcOm5TcouW4TcOq4RcAua4RcOq4Rcoua5Tcum5TchOfyXlvcp8osvJca+SuQWfBxfC4kjg4vhcRejIqQ5DkGASKkORUjbJSKkOQ5CBIfDkORApDkVIfCk8PipD4gnh8Vw+II4PK+HxJn5Ly04OBMvJXLXg4iwuSuW1yVyk57lNy6LlFyC57lNy6LlFyi57lNy6LlNyE57lNy3uU3KLC5Lja5K5BY3KbltcpsRZcLjW5LiTvkVIJFSLAcipBIqRpkpFSHIchAkPgkVIgXDkPh8KKRXBw0BwcM+BFwcM+JJ4OK4OJJ4XF8LiKLCsXwuJM7E2NbE2BMrEXLaxNiLGxNy2sRYkxuU3LexNgLC5Tct7lNyixuUXLe5TchMeF5a3JcRdcVExUOMqioUVGgcVIUVCBDghoGZGkDBpAwYQHAEgDCRAwCnhcUEkcKxVKpIsTYulUmdibGlibEWdibGtibEmdibGtibAWVym5bWFYExuS8tbC8oqiozlVK3mMtIuM5VStBpDiJVSoLNMpxBRphhKMgko0miYACMAIgABAqAkRHSSTSqqmoppVVKpJTxZJI4XFkEiwuLLiKLC4vg4C5ZVysZVSvWMNpVysZVSkNpVSspVSoNZTlZynKk1lPrOU5UmnT6iU+hL6aOn0JYT04ioEYIACIAIIEZFJpU6VSKkdJIiACIAAkAAiIwC8yaVNMJpU06I83RNKmmE0qaIdE0qaYTSppJvKqVhNLmkm0pysppUogaynKzlOUFrKcrOVUqTQ5USqlBUaYYRgAEAEiCppqQqadTakKm0WlaCOl0rS6EfR1PR0FXQno6DFBPR0F4k0qaYTRzTreLomlzTnmlTSDpmlTTnmlzSTeaXNOeaXNJN5pc055pc0g3lVKxlXKE2lVKylVKC1lVKzlVKE0hxEqoCo0wwQAVCBUFUSqadRQRami1NqItLpWptZKul1PS6DF9HUdHWTGnR1n0+imPn/SpWXTldzmbTSppjKqVJvNKmmEq5Um80uaYSrlSbyrlYSrlQbyrlYyrzQm8q5WOa0lCayqlZyrgTSKiIqMlRlDgJkACSadTUSqKqooKbUWqqLQ0VqbRam1kn0uptLoaX0dR9Lc88y/Xvzn0789ZnL3+P5s/LO/Xcmb/y+99fvJv5dx/v62KY6OjrP56u7iXP0+c3eW/S/Pnzn93mlX8Wz8Xl52ftRTHz8OAPouRUVAElxUASXFwBJpF5AQXlpAAmmWmQAlxcAZS4uEAVwQwygQAJVNIJpNRQAUVFADWIqaAy0mkAzpAAZOGYAL//2Q==);
+    background-size: cover;
+    color: rgb(0, 0, 0);
+}
+
+.titleBm{
+    color: rgb(0, 0, 0);
+    font-family: "Tourney", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-shadow: 2px 2px 4px rgb(124, 124, 124);
+    text-align: center;
+    font-size: 50px;
+}
+
+h2{
+    font-size: 20px;
+    color: black;
+}
+
+nav {
+    background-color: #000000a2; 
+    padding: 15px 0; 
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: inline; 
+    margin-right: 30px; 
+}
+
+a {
+    color: white; 
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+a:hover {
+    color: #ffcc00; 
+}
+
+.proyectoDjango {
+    position: absolute; 
+    top: 20px; 
+    right: 20px; 
+}
+
+footer{
+    padding-top: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+}
+.contSup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#content{
+    text-align: center;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.555);
+    border-radius: 25px;
+}
+p{
+    color: black;
+}
+#content h1{
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+}
+
+form {
+    max-width: 300px;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input{
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.contact{
+    color: #0056b3;
+    margin-left: -2px;
+}
