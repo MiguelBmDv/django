@@ -1,20 +1,33 @@
-    {%extends 'layoutC.html'%}
+   {%extends 'layoutC.html'%}
+   {% load static %}
+
     {%block title%}
     Bienvenidos
     {%endblock%}
 
+
     {%block seccion%}
-        Estas en el Inicio :D
+        ¡Estas en el Inicio!
     {%endblock%}
 
     {%block content%}
 
-    <h1>Bienvenid@s a la Mercancia del explorador</h1>
-    
+    <div class="supCont">
+    <h2>Bienvenid@s a la Mercancia del explorador</h2>
+
     <p>¡Hola Invocadores! Bienvenidos a la Tienda la "Mercancia del explorador", tu destino número uno para productos de League of Legends. En nuestra tienda, encontrarás una amplia selección de peluches y figuras para satisfacer todas tus necesidades de coleccionismo y diversión en el mundo de LoL.</p>
+    </div>
+    <div class="miniCont">  
     <h2>Nuestros Productos</h2>
-    <p>Peluches: ¡Abraza a tus campeones favoritos con nuestra colección de peluches de League of Legends! Desde el adorable Teemo hasta el imponente Garen, tenemos una amplia variedad de peluches para que puedas llevar a casa a tus campeones favoritos.</p>
+    <p> <strong>Peluches:</strong> ¡Abraza a tus campeones favoritos con nuestra colección de peluches de League of Legends! Desde el adorable Teemo hasta el imponente Garen, tenemos una amplia variedad de peluches para que puedas llevar a casa a tus campeones favoritos.</p>
         
-    <p> Figuras: Dale vida a tu colección con nuestras figuras de League of Legends. Desde figuras de acción detalladas hasta estatuas impresionantes, nuestras figuras son perfectas para exhibir en tu estantería o escritorio.</p>
-        
+    <p> <strong>Figuras:</strong> Dale vida a tu colección con nuestras figuras de League of Legends. Desde figuras de acción detalladas hasta estatuas impresionantes, nuestras figuras son perfectas para exhibir en tu estantería o escritorio.</p>
+    </div>
+    <div class="imgCont">
+        <img src="{% static 'img/tresh.png' %}" alt="">
+        <img src="{% static 'img/scrab.png' %}" alt="">
+        <img src="{% static 'img/nami.png' %}" alt="">
+        <img src="{% static 'img/figYuumi.png' %}" alt="">
+    </div>
+
     {%endblock%}

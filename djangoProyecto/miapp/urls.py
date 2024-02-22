@@ -4,7 +4,6 @@ from .import views
 
 
 urlpatterns = [
-    path ('admin/', admin.site.urls),
     path ('inicio/', views.inicio,name="inicio"),
     path ("years/",views.clase,name="clase"),
     path ("contacto/",views.contacto,name="contacto"),

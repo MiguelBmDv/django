@@ -3,27 +3,27 @@
     Contacto
 {%endblock%}
 {%block seccion%}
-        Estas en contactanos :D
+        ¡Estas en contactanos!
 {%endblock%}
 {% block content %}
-<h1>Contactanos :D</h1>
-    <form>
-        <div class="form-group">
+<h2>Contactanos</h2>
+<form class="minimalist-form">
+    <div class="form-group">
         <label for="nombreCompleto">Nombre Completo</label>
         <input type="text" class="form-control" id="nombreCompleto" placeholder="Nombre Completo">
-        </div>
-        <div class="form-group">
+    </div>
+    <div class="form-group">
         <label for="correoElectronico">Correo Electrónico</label>
         <input type="email" class="form-control" id="correoElectronico" placeholder="name@example.com">
-        </div>
-        <div class="form-group">
+    </div>
+    <div class="form-group">
         <label for="edad">Edad</label>
         <input type="number" class="form-control" id="edad" placeholder="Edad">
-        </div>
-        <div class="form-group">
+    </div>
+    <div class="form-group">
         <label for="celular">Numero de Celular</label>
         <input type="tel" class="form-control" id="celular" placeholder="Numero de Celular">
-        </div>
-        <button type="button" class="btn btn-primary">Enviar</button>
-    </form>
+    </div>
+    <button type="button" class="btn btn-primary">Enviar</button>
+</form>
 {% endblock %}
