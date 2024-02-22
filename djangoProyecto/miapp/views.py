@@ -19,40 +19,40 @@ def pys(request):
     return render (request, 'pys.html')
 
 def clase (request ):
-    template = """
-                    <h1>Inicio</h1>
-                    <p>Años desde el 2024 hasta 2050</p>
-                    <ul>
-                """
+    template = """Inicio """
+    
     year=2024
     while year <= 2050:
-        template += f"<li> {str(year)} </li>"
+        template += f" {str(year)}"
         year += 1
-    template += """</ul><hr>"""
+    # template += """</ul><hr>"""
+    
 
-
-    template += """
-                    <h1>Años biciestos</h1>
-                    <ul>
-                """
+    # template += """Años biciestos"""
+    
     year1 = 2024
     while year1 <= 2050:
         if year1 % 4 == 0:
-            template += f"<li>{str(year1)}</li>"
+            template += f"{str(year1)}"            
+            # template += f"<li>{str(year1)}</li>"
         year1 += 1
-    template += """</ul><hr>"""
+    # template += """</ul><hr>"""
 
-    template += """
-                <h1>Años pares</h1>
-                <ul>
-                """
+    # template += """Años pares"""
+    
     year2 = 2024
     while year2 <= 2050:
         if year2 % 2 == 0:
-            template += f"<li>{str(year2)}</li>"
+            template += f"{str(year2)}"            
+            # template += f"<li>{str(year2)}</li>"
         year2 += 1
-    template += """</ul><hr>"""
-    return render(request,'years.html')
+    # template += """</ul><hr>"""
+    return render(request,'years.html',{
+        'miVariable':'Hola, soy un gato que ta en la vista',
+        'title':'Años 2024-2050',
+        'titlePag':'Listado de años',
+        'template':template,
+    })
 
 
 def contacto (request,name="",lastname=""):

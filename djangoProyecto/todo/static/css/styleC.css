@@ -25,7 +25,7 @@ body {
 header{
     width: 1212px;
     height: 140px;
-    background-color: #2b2f30;
+    background-color: #1a1b1b;
     margin:0px auto;
 }
 
@@ -130,20 +130,63 @@ nav ul li a:hover{
 
 
 #textSup{
-    text-align: center;
-    font-family: "Anta", sans-serif;
-    font-size: 35px;
-    font-style: normal;
-    color: #2ba977;
-    text-shadow: 2px 2px black;
-    margin-bottom: 30px;
+  text-align: center;
+  font-family: "Anta", sans-serif;
+  font-size: 35px;
+  font-style: normal;
+  color: #2ba977;
+  text-shadow: 2px 2px black;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+#textSup img {
+  max-width: 50px;
+  left: calc(100% - 72px);
+  filter: brightness(60%);
+  top: 1;
+  position: fixed;
+  z-index: 1; 
+}
+
+#textSup h3{
+  color: #0dc00d;
+  font-size: 15PX;
+  left: calc(100% - 100px);
+  top: 1;
+  bottom: 45%;
+  position: fixed;
+  z-index: 1; 
+}
+
+#textSup img:hover {
+  filter: brightness(100%);
+  transition: filter 300ms;
+  cursor: pointer;
+} 
+
+
+.supCont{
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+.supCont h2 {
+  margin-bottom: 5px;
 }
 
 #content { 
     margin:0 auto;
+    padding-top: 20px;
+    margin-bottom: 30px;
     text-align: center;
-    width: 720px;
+    width: 1212px;
+    min-height: 930px;
     animation: 4.0s cubic-bezier(.25, 1, .30, 1) wipe-in-bottom-right both;
+    background-color: rgba(243, 242, 242, 0.555);
+    box-shadow: 15px 15px rgba(236, 236, 236, 0.589);
 }
 
 #content .miniCont h2{
@@ -152,27 +195,29 @@ nav ul li a:hover{
     margin-right: 20px;
 }
 
-#content .miniCont p{
-    margin: 0 20px;
-}
-
 #content .miniCont{
-    margin-top: 30px;
+    margin: 0 auto ;
     display: flex;
     justify-content: space-between;
     width: 720px;
     align-items: start;
+    border: 1px solid rgba(51, 90, 1, 0.719);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #e4e1e1;
 } 
 
 .imgCont{
-    width: 720px;
+    margin: 0 auto;
+    width: 80%;
     margin-top: 30px;
 }
 
 .imgCont img{
-    max-width: 170px;
-    border: 2px solid rgba(0, 0, 0, 0.733);
+    max-width: 180px;
+    background-color: #d1d4d683;
     border-radius: 6px;
+    margin: 0px 5px;
 }
 
 .imgCont img:hover{
@@ -254,4 +299,12 @@ form {
   footer{
     margin-top: 20px;
     text-align: center;
+    width: 1250px;
+    background-color: #1b1e1f;
+    border: 1px solid #333;
+    color: #d1d4d6;
+    text-align: center;
+    padding-top: 15px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 20px gray;
   }

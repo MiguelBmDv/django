@@ -1,9 +1,13 @@
 {%extends 'layoutC.html'%}
 {%block title%}
-    Lista de años
+    {{titlePag}}
 {%endblock%}
 
 {% block content %}
 {{block.super}}
-<h1> Años 2024-2050</h1>
+<h1 class="title"> {{title}}</h1>
+{{miVariable}} 
+<br>
+{{template}}
+
 {% endblock %}
