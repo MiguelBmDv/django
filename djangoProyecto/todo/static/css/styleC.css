@@ -153,7 +153,7 @@ nav ul li a:hover{
 #textSup h3{
   color: #0dc00d;
   font-size: 15PX;
-  left: calc(100% - 100px);
+  left: calc(100% - 90px);
   top: 1;
   bottom: 45%;
   position: fixed;
@@ -183,7 +183,7 @@ nav ul li a:hover{
     margin-bottom: 30px;
     text-align: center;
     width: 1212px;
-    min-height: 930px;
+    /* min-height: 930px; */
     animation: 4.0s cubic-bezier(.25, 1, .30, 1) wipe-in-bottom-right both;
     background-color: rgba(243, 242, 242, 0.555);
     box-shadow: 15px 15px rgba(236, 236, 236, 0.589);
@@ -207,6 +207,8 @@ nav ul li a:hover{
     background-color: #e4e1e1;
 } 
 
+
+
 .imgCont{
     margin: 0 auto;
     width: 80%;
@@ -226,14 +228,26 @@ nav ul li a:hover{
     cursor: pointer;
 }
 
+.title {
+  color: #000000;
+  margin-bottom: 5px;
+}
+h3 {
+  font-size: 20px;
+  padding-left: 5px;
+  padding-right: 15px;
+}
 
-
-
+.miniCont ul li {
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
 
 /* contacto */
 
 form {
-    max-width: 45%;
+    max-width: 25%;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
@@ -308,3 +322,14 @@ form {
     margin: 0 auto;
     box-shadow: 0px 0px 20px gray;
   }
+
+
+
+  /* HOLA MUNDO */
+
+.mundoPng{
+  max-width: 450px;
+  box-shadow: 0px 0px 10px  gray;
+  margin-bottom: 10px;
+
+}

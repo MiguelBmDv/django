@@ -3,35 +3,48 @@
     {{titlePag}}
 {%endblock%}
 
+{%block seccion%}
+    
+¡Estas en La lista de años!
+{%endblock%}
+
 {% block content %}
-{{block.super}}
-<h1 class="title"> {{title}}</h1>
+<div class="title"> 
+    {%include 'fecha_actual.html'%}
+    {% comment %} <h1> {{title}}</h1> {% endcomment %}
+</div>
 
-<ul>
-    {% for año in años %}
-        <li>{{ año }}</li>
-    {% endfor %}
-</ul>
 
-<h2>Años Pares</h2>
-<ul>
-    {% for año in años_pares %}
-        <li>{{ año }}</li>
-    {% endfor %}
-</ul>
+<div class="miniCont">  
+    <h3>Listado de años</h3>
+    <ul>
+        {% for año in años %}
+            <li>{{ año }}</li>
+        {% endfor %}
+    </ul>
 
-<h2>Años Impares</h2>
-<ul>
-    {% for año in años_impares %}
-        <li>{{ año }}</li>
-    {% endfor %}
-</ul>
+    <h3>Años Pares</h3> 
+    <ul>
+        {% for año in años_pares %}
+            <li>{{ año }}</li>
+        {% endfor %}
+    </ul>
 
-<h2>Años Bisiestos</h2>
-<ul>
-    {% for año in años_bisiestos %}
-        <li>{{ año }}</li>
-    {% endfor %}
-</ul>
+    <h3>Años Impares</h3>
+    <ul>
+        {% for año in años_impares %}
+            <li>{{ año }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Años Bisiestos</h3>
+    <ul>
+        {% for año in años_bisiestos %}
+            <li>{{ año }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
 
 {% endblock %}
+

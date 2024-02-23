@@ -3,11 +3,20 @@
     Holaaaaaaa
 {%endblock%}
 
+
+{%block seccion%}
+    
+¡Estas en Saludo!
+{%endblock%}
+
 {% block content %}
-<h1>Saludos</h1>
+<h2>Aprende a saludar :D</h2>
 <ul>
     {% for saludo in lista_saludos %}
-        <li>{{ saludo }}</li>
+        <li>{{ saludo }} {{forloop.first}} </li>
+        {% comment %} forloop. first  last  counter counter0  {% endcomment %}
+        {%empty%}
+            <p> No hay datos </p>
     {% endfor %}
 </ul>
 {% endblock %}

@@ -4,9 +4,24 @@
 {%endblock%}
 {%block seccion%}
         ¡Estas en contactanos!
-{%endblock%}
+{%endblock%} 
 {% block content %}
+
+<p> {{"Creado por Miguel Bm Dev"}} </p>
+<p>{{texto|default:"No me crean"}} </p>
+<p>{{letra|first}} </p>
+<p>{{letra|last}} </p>
+<p>{{letra|join:" (!-!) "}} </p>
+<p>{{letra|length}} </p>
+<p>{{'Colombia'| upper}} </p>
+<p>{{'Colombia'| title}} </p>
+<p>{{'Colombia'| lower}} </p>
+<p>{{letra|random}} </p>
+<p>{{'<h1>hola </h1>'| striptags}} </p>
+<p>{{'lor emda sdas sasasd asdasdas asd asdad dasd'| wordcount}} </p>
+
 <h2>Contactanos</h2>
+
 <form class="minimalist-form">
     <div class="form-group">
         <label for="nombreCompleto">Nombre Completo</label>

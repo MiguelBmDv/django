@@ -1,13 +1,24 @@
 {%extends 'layoutC.html'%}
+{% load static %}
 {%block title%}
     Hola mundo
 {%endblock%}
 
+{%block seccion%}
+    
+¡Estas en el mundo, mundo dice hola!
+{%endblock%}
+
 {% block content %}
-<h1>Hello World</h1>
+<div> 
+    <img class="mundoPng" src="{% static 'img/drMundo.png' %}" alt=""> 
+</div>
+
+<h1>¡Hola mundo!</h1>
     <ul>
         {% for elemento in lista %}
             <li>{{ elemento }}</li>
         {% endfor %}
     </ul>
+
 {% endblock %}

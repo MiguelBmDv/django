@@ -3,7 +3,16 @@
     Sobre Mi
 {%endblock%}
 
+{%block seccion%}
+    
+¡Estas en mi presentación!
+{%endblock%}
+
 {% block content %}
-{{block.super}}
-<h1> </h1>
+<h1>Sobre Mi</h1>
+<ul>
+    {% for aspecto in lista_aspectos %}
+        <li>{{ aspecto }}</li>
+    {% endfor %}
+</ul>
 {% endblock %}
