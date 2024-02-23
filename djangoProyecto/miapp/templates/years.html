@@ -6,8 +6,32 @@
 {% block content %}
 {{block.super}}
 <h1 class="title"> {{title}}</h1>
-{{miVariable}} 
-<br>
-{{template}}
+
+<ul>
+    {% for año in años %}
+        <li>{{ año }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Años Pares</h2>
+<ul>
+    {% for año in años_pares %}
+        <li>{{ año }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Años Impares</h2>
+<ul>
+    {% for año in años_impares %}
+        <li>{{ año }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Años Bisiestos</h2>
+<ul>
+    {% for año in años_bisiestos %}
+        <li>{{ año }}</li>
+    {% endfor %}
+</ul>
 
 {% endblock %}

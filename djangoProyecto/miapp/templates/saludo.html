@@ -4,6 +4,10 @@
 {%endblock%}
 
 {% block content %}
-{{block.super}}
-<h1> </h1>
+<h1>Saludos</h1>
+<ul>
+    {% for saludo in lista_saludos %}
+        <li>{{ saludo }}</li>
+    {% endfor %}
+</ul>
 {% endblock %}

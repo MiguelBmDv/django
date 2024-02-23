@@ -4,10 +4,21 @@ def inicio(request):
     return render(request,'index.html')
 
 def hola_Mundo(request):
-    return render(request,'hola_mundo.html')
+    lista = []
+    i = 0
+    while i < 5:
+        lista.append("Hello world")
+        i += 1
+    return render(request,'hola_mundo.html', {
+        'lista': lista
+        })
 
 def saludo(request):
-    return render(request,'saludo.html')
+    lista_saludos = ["¡Hola!", "¡Buenos días!", "¡Buenas tardes!", "¡Buenas noches!", "¡Hola de nuevo!"]
+
+    return render(request,'saludo.html', {
+        'lista_saludos': lista_saludos
+        })
 
 def presentacion(request):
     return render(request,'presentacion.html')
@@ -19,40 +30,20 @@ def pys(request):
     return render (request, 'pys.html')
 
 def clase (request ):
-    template = """Inicio """
-    
-    year=2024
-    while year <= 2050:
-        template += f" {str(year)}"
-        year += 1
-    # template += """</ul><hr>"""
-    
+    años = [año for año in range(2024, 2051)]
+    años_pares = [año for año in años if año % 2 == 0]
+    años_impares = [año for año in años if año % 2 != 0]
+    años_bisiestos = [año for año in años if año % 4 == 0 and (año % 100 != 0 or año % 400 == 0)]
 
-    # template += """Años biciestos"""
-    
-    year1 = 2024
-    while year1 <= 2050:
-        if year1 % 4 == 0:
-            template += f"{str(year1)}"            
-            # template += f"<li>{str(year1)}</li>"
-        year1 += 1
-    # template += """</ul><hr>"""
-
-    # template += """Años pares"""
-    
-    year2 = 2024
-    while year2 <= 2050:
-        if year2 % 2 == 0:
-            template += f"{str(year2)}"            
-            # template += f"<li>{str(year2)}</li>"
-        year2 += 1
-    # template += """</ul><hr>"""
     return render(request,'years.html',{
-        'miVariable':'Hola, soy un gato que ta en la vista',
         'title':'Años 2024-2050',
         'titlePag':'Listado de años',
-        'template':template,
+        'años': años,
+        'años_pares': años_pares,
+        'años_impares': años_impares, 
+        'años_bisiestos': años_bisiestos,
     })
+
 
 
 def contacto (request,name="",lastname=""):

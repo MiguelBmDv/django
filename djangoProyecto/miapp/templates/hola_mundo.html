@@ -4,6 +4,10 @@
 {%endblock%}
 
 {% block content %}
-{{block.super}}
-
+<h1>Hello World</h1>
+    <ul>
+        {% for elemento in lista %}
+            <li>{{ elemento }}</li>
+        {% endfor %}
+    </ul>
 {% endblock %}
