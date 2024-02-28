@@ -1,4 +1,5 @@
 {%extends 'layoutC.html'%}
+{% load miapp_filters %}
 {%block title%}
     pys
 {%endblock%}
@@ -11,4 +12,8 @@
 {% block content %}
 {{block.super}}
 <h1> </h1>
+{{ 200 | numUnidades }} <br>
+{{ "esto no es lowercase" | mayusculas }}
+
+
 {% endblock %}

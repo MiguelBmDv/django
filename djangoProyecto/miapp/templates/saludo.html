@@ -1,4 +1,5 @@
 {%extends 'layoutC.html'%}
+{% load miapp_filters %}
 {%block title%}
     Holaaaaaaa
 {%endblock%}
@@ -19,4 +20,6 @@
             <p> No hay datos </p>
     {% endfor %}
 </ul>
+<br>
+{{"Miguel Angel"|saludo|safe}}
 {% endblock %}

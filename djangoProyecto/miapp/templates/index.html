@@ -1,4 +1,5 @@
 {%extends 'layoutC.html'%}
+{% load miapp_filters %}
 {% load static %}
 
     {%block title%}
@@ -29,5 +30,13 @@
         <img src="{% static 'img/nami.png' %}" alt="">
         <img src="{% static 'img/figYuumi.png' %}" alt="">
     </div>
+    {{ "yuumi" | precioP }}
+    <br>
+    <br>
+    <ul>
+        {% for habilidad in "Irelia"|habilidades %}
+            <li>{{ habilidad }}</li>
+        {% endfor %}
+    </ul>
 
     {%endblock%}
