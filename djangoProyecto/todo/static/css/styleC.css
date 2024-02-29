@@ -333,3 +333,39 @@ form {
   margin-bottom: 10px;
 
 }
+
+
+/* LISTADO */
+
+.listCont{
+  text-decoration: none;
+  text-align: left;
+  margin: 0 auto;
+  width: 45%;
+  
+}
+
+.listCont ul li{
+  overflow: auto;
+  padding: 10px;
+  background-color: #e4dfdfda;
+  list-style-type: none;
+  border: 1px solid black;
+  margin-bottom: 5px;
+}
+
+.listCont li p {
+  display: inline;
+  margin: 0;
+  margin-right: 2px;
+  color: #128155;
+  font-weight: bold;
+}
+
+.listCont li img {
+  top: 0;
+  float: right;
+  background-color:  #128155bb;
+  box-shadow: 0px 0px 5px rgb(56, 56, 56);
+  width: 50px; 
+}

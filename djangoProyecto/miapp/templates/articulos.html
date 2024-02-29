@@ -1,0 +1,26 @@
+{%extends 'layoutC.html'%}
+{% load static %}
+
+{%block title%}
+    Listado
+{%endblock%}
+
+{%block seccion%}
+        ¡Estas en el listado de articulos!
+{%endblock%}
+
+{% block content %}
+<div class="listCont">
+    <ul>
+        {% for articuloIN in articulos %}
+            <li>
+                <img src="{% static 'img/iconoT.png' %}" alt="">
+                   <p>ID:</p> {{articuloIN.id}} <br> <p>Titulo:</p>  {{articuloIN.title}}  <br> <p>Contenido:</p>  {{articuloIN.content}}  <br> <p>Estado:</p>  {{articuloIN.public}} 
+
+            </li>
+            {%empty%}
+                <p> No hay datos </p>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

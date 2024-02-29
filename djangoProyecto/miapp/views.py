@@ -1,4 +1,5 @@
 from django.shortcuts import render,redirect,HttpResponse
+from miapp.models import Article
 
 def inicio(request):
     return render(request,'index.html')
@@ -77,3 +78,34 @@ def contacto (request,name="",lastname=""):
         'letra':letras
     })
 
+
+def crear_articulo(request, title, content, public):
+    articulo = Article(title= title,
+                       content=content,
+                       public=public,
+)
+    articulo.save()
+    return HttpResponse(f"Articulo Creado: {articulo.title} - {articulo.content} ")
+
+def articulo(request):
+    try:
+        articulo = Article.objects.get(pk=1,public=False)
+        response = f"Articulo extraido: {articulo.title} - {articulo.content} - Estado: {articulo.public} "
+    except:
+        response= "<strong>Articulo no encontrado </strong>"
+    return HttpResponse(response)
+
+def editar_articulo(request, id, title, content, public):
+    articulo = Article.objects.get(pk=id)
+    articulo.id=2
+    articulo.title= title
+    articulo.content= content
+    articulo.public=public   
+    articulo.save()
+    return HttpResponse(f"El articulo {articulo.id} de nombre {articulo.title} ha sido actualizado y su estado es: {articulo.public}")
+
+def articulos(request):
+    articulos = Article.objects.order_by('-id')[:3]
+    return render (request,'articulos.html',{
+        'articulos':articulos
+    })

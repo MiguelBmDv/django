@@ -14,4 +14,9 @@ urlpatterns = [
     path('presentacion/', views.presentacion,name="presentacion"),
     path('pys/', views.pys,name="pys"),
     path('acercaDe/', views.quienesSomos, name="acercaDe"),
+    path('crear-articulo/',views.crear_articulo, name="createArticle"),
+    path('crear-articulo/<str:title>/<str:content>/<str:public>',views.crear_articulo, name="createArticle"),
+    path('articulo/',views.articulo, name= "articulo"),
+    path('editar-articulo/<int:id>/<str:title>/<str:content>/<str:public>',views.editar_articulo, name="editarArticulo"),
+    path('articulos/', views.articulos, name= "articulosLista"),
 ]
