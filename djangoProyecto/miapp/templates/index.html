@@ -31,12 +31,23 @@
         <img src="{% static 'img/figYuumi.png' %}" alt="">
     </div>
     {{ "yuumi" | precioP }}
+
+
+
+    <br>    
     <br>
-    <br>
-    <ul>
+    <!-- <ul>
         {% for habilidad in "Irelia"|habilidades %}
             <li>{{ habilidad }}</li>
         {% endfor %}
+    </ul> -->
+
+    <ul>
+        {% for categoria in "Lacteos"|categorias %}
+            <li>{{ categoria }}</li>
+        {% endfor %}
     </ul>
+
+
 
     {%endblock%}

@@ -68,3 +68,29 @@ def habilidades(value):
         # Agrega más campeones y sus habilidades aquí
     }
     return habilidades.get(value, ['Not found'])
+
+@register.filter(name='categorias')
+def categorias(value):
+    categorias = {
+        'Lacteos': [
+            'Leche',
+            'Queso',
+            'Mantequilla',
+        ],
+        'Verduras':[
+            'Apio',
+            'Cebolla',
+            'Acelga',
+        ],
+        'Carnes':[
+            'Res',
+            'Cerdo',
+            'Pollo',
+        ],
+        'Aseo':[
+            'Limpido',
+            'Jabon',
+            'Shampoo',
+        ]
+    }
+    return categorias.get(value, ['Not found'])
