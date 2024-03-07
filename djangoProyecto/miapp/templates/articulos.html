@@ -14,10 +14,14 @@
     <ul>
         {% for articuloIN in articulos %}
             <li>
-                <img src="{% static 'img/iconoT.png' %}" alt="">
-                   <p>ID:</p> {{articuloIN.id}} <br> <p>Titulo:</p>  {{articuloIN.title}}  <br> <p>Contenido:</p>  {{articuloIN.content}}  <br> <p>Estado:</p>  {{articuloIN.public}} 
-
+                   <p>ID:</p> {{articuloIN.id}} <br> <p>Titulo:</p>  {{articuloIN.title}}  <br> <p>Contenido:</p>  {{articuloIN.content}}  <br> <p>Estado:</p>                  {%if articuloIN.public%}
+                   <strong class="publicado">Publicado</strong>
+               {%else%}
+                       <strong>Privado</strong>
+               {%endif%} <br> <span>{{articuloIN.create_date}}</span>
+                   <a class="deleteB" href="{% url 'borrar' articuloIN.id %}">Eliminar</a>
             </li>
+
             {%empty%}
                 <p> No hay datos </p>
         {% endfor %}

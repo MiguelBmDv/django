@@ -19,4 +19,7 @@ urlpatterns = [
     path('articulo/',views.articulo, name= "articulo"),
     path('editar-articulo/<int:id>/<str:title>/<str:content>/<str:public>',views.editar_articulo, name="editarArticulo"),
     path('articulos/', views.articulos, name= "articulosLista"),
+    path('borrar-articulos/<int:id>', views.eliminar_articulo, name= "borrar"),
+    path('editar-articuloSQL/<int:id>/<str:title>/<str:content>/<str:public>', views.editar_articulo_sql, name="editarArticuloSQL"),
+    path('borrar-articuloSQL/<int:id>', views.eliminar_articulo_sql, name="borrarSQL"),
 ]

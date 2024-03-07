@@ -1,5 +1,8 @@
 from django.shortcuts import render,redirect,HttpResponse
 from miapp.models import Article
+from django.db import connection
+
+
 
 def inicio(request):
     return render(request,'index.html')
@@ -80,6 +83,8 @@ def contacto (request,name="",lastname=""):
 
 
 def crear_articulo(request, title, content, public):
+
+    #PLANTILLA: crear-articulo/Poro/Adorable peluche de poro/True
     articulo = Article(title= title,
                        content=content,
                        public=public,
@@ -105,7 +110,40 @@ def editar_articulo(request, id, title, content, public):
     return HttpResponse(f"El articulo {articulo.id} de nombre {articulo.title} ha sido actualizado y su estado es: {articulo.public}")
 
 def articulos(request):
-    articulos = Article.objects.order_by('-id')[:3]
+    # ordenar por algun campo
+    articulos = Article.objects.order_by('id')
+    #filtrar por campo
+    articulos= Article.objects.filter(title= "Katarina")
+    #filtrar por campo + and
+    articulos= Article.objects.filter(title= "Katarina",public=True)
+    #filtrar con lookups
+    articulos= Article.objects.filter(title__contains="umi")
+    articulos= Article.objects.filter(title__exact="umi")
+    articulos= Article.objects.filter(title__iexact="yuumi")
+    articulos= Article.objects.filter(id__gt=2)
+    articulos= Article.objects.filter(id__in=[2,15])
+    articulos= Article.objects.filter(title__contains="Kat").exclude(public=True)
+    # articulos= Article.objects.raw("SELECT * FROM miapp_Article where content like 'l%' AND public = 1")
+    articulos = Article.objects.order_by('id')
+
     return render (request,'articulos.html',{
         'articulos':articulos
     })
+
+def eliminar_articulo(request, id):
+    articulo= Article.objects.get(pk=id)
+    articulo.delete()
+    return redirect('articulosLista')   
+
+
+#editar-articuloSQL/20/testeado/Aqui se hizo un cambio/False
+
+def editar_articulo_sql(request, id, title, content, public):
+    with connection.cursor() as cursor:
+        cursor.execute("UPDATE miapp_Article SET title=%s, content=%s, public=%s WHERE id=%s", [title, content, public, id])
+    return redirect('articulosLista')
+
+def eliminar_articulo_sql(request, id):
+    with connection.cursor() as cursor:
+        cursor.execute("DELETE FROM miapp_article WHERE id=%s", [id])
+    return redirect('articulosLista')
