@@ -1,0 +1,26 @@
+{%extends 'layoutC.html'%}
+{%block title%}
+Formulario-Crear articulo
+{%endblock%}
+
+{%block seccion%}
+    
+¡Estas en la creacion de articulos!
+{%endblock%}
+{%block content%}
+
+<div class="formArt">
+    <form action=" " method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Guardar"/>
+    </form>
+</div>
+
+    {%if form.errors%}
+        <strong class="rojo">
+            Hay errores en el Formulario
+        </strong>
+    {%endif%}
+
+{%endblock%}

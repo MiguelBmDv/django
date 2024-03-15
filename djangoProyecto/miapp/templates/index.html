@@ -30,7 +30,7 @@
         <img src="{% static 'img/nami.png' %}" alt="">
         <img src="{% static 'img/figYuumi.png' %}" alt="">
     </div>
-    {{ "yuumi" | precioP }}
+    {% comment %} {{ "yuumi" | precioP }}
 
 
 
@@ -46,8 +46,6 @@
         {% for categoria in "Lacteos"|categorias %}
             <li>{{ categoria }}</li>
         {% endfor %}
-    </ul>
-
-
+    </ul> {% endcomment %}
 
     {%endblock%}

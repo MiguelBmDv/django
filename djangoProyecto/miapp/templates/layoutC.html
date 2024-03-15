@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/styleC.css' %}">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>
         {% block title %}
 
@@ -28,12 +28,14 @@
     <nav>
         <ul >
             <li><a href="{%url 'inicio'%}">Inicio</a></li>
-            <li><a href="{%url 'years'%}">Años desde el 2024 al 2025</a></li>
+            {% comment %} <li><a href="{%url 'years'%}">Años desde el 2024 al 2025</a></li> {% endcomment %}
             <li><a href="{%url 'contacto'%}">Contacto</a></li>
-            <li><a href="{%url 'holaMundo'%}">HelloWorld</a></li>
-            <li><a href="{%url 'saludo'%}">Saludo</a></li>
-            <li><a href="{%url 'presentacion'%}">Sobre mi</a></li>
-            <li><a href="{%url 'pys'%}">Productos y Servicios</a></li>
+            {% comment %} <li><a href="{%url 'holaMundo'%}">HelloWorld</a></li>
+            <li><a href="{%url 'saludo'%}">Saludo</a></li> {% endcomment %}
+            {% comment %} <li><a href="{%url 'presentacion'%}">Sobre mi</a></li> {% endcomment %}
+            {% comment %} <li><a href="{%url 'pys'%}">Productos y Servicios</a></li> {% endcomment %}
+            <li><a href="{%url 'articulosLista'%}">Productos</a></li>
+            <li><a href="{%url 'createFull'%}">Crear Articulos</a></li>
             <li><a href="{%url 'acercaDe'%}">Quienes somos</a></li>
             <li><a class="proyectoDjango" href="{%url 'home'%}">Proyecto Django!</a></li>
         </ul>

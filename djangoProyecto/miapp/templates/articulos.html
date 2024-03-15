@@ -9,22 +9,60 @@
         ¡Estas en el listado de articulos!
 {%endblock%}
 
+
+
 {% block content %}
-<div class="listCont">
-    <ul>
-        {% for articuloIN in articulos %}
-            <li>
-                   <p>ID:</p> {{articuloIN.id}} <br> <p>Titulo:</p>  {{articuloIN.title}}  <br> <p>Contenido:</p>  {{articuloIN.content}}  <br> <p>Estado:</p>                  {%if articuloIN.public%}
-                   <strong class="publicado">Publicado</strong>
-               {%else%}
-                       <strong>Privado</strong>
-               {%endif%} <br> <span>{{articuloIN.create_date}}</span>
-                   <a class="deleteB" href="{% url 'borrar' articuloIN.id %}">Eliminar</a>
-            </li>
+    {% if messages %}
+        {%for m in messages%}
+            <div class="message">
+                {{m}}
+            </div>
+                <script>
+                        swal({
+                            title: "{{titulo}}",
+                            text: "{{m}}",
+                            icon: "{{icono}}",
+                            buttons: {cancel: "Cancelar",
+                                    confirm: "Aceptar",},
+                        })
+                        .then((willoption) => {
+                            if (willoption) {
+                                swal ("¡Eliminado correctamente!",{
+                                    icon:"success",
+                                });
+                            } else {
+                                swal ("Operacion cancelada.",{
+                                    icon:"info",
+                            });
+                        }
+                        });
+                </script>
+        {% endfor %}    
+    {% endif %}
+
+
+    <div class="listCont">
+            {% for articuloIN in articulos %}
+                <article>
+                    {%if articuloIN.image != 'null' and articuloIN.image.url|length >= 1%}
+                        <img src="{{articuloIN.image.url}}">
+                    {%endif%}  
+                    {% comment %} #<p>ID:</p> {{articuloIN.id}} <br>  {% endcomment %}
+                    <p>Titulo:</p>  {{articuloIN.title}}  
+                    <p>Contenido:</p>  {{articuloIN.content}}  
+                    <p>Estado:</p>                  
+                    {% comment %} {%if articuloIN.public%}
+                        <strong class="publicado">Publicado</strong> <br> 
+                    {%else%}
+                        <strong>Privado</strong> {% endcomment %}
+                        {% comment %} {%endif%} {% endcomment %}
+
+                    <span>{{articuloIN.create_date}}</span>
+                    <a class="deleteB" href="{% url 'borrar' articuloIN.id %}">Eliminar</a>
+                </article>
 
             {%empty%}
                 <p> No hay datos </p>
-        {% endfor %}
-    </ul>
-</div>
+            {% endfor %}
+    </div>
 {% endblock %}

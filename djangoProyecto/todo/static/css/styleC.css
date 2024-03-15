@@ -33,11 +33,10 @@ header{
 .logotipo h1{
     display: block;
     float: left;
-    margin-top: 10px;
+    margin-top: 1px;
     margin-left: 30px;
     letter-spacing: 2px;
     text-transform: uppercase;
-
     font-weight: lighter;
     color: #2ba977;
 
@@ -136,7 +135,8 @@ nav ul li a:hover{
   font-style: normal;
   color: #2ba977;
   text-shadow: 2px 2px black;
-  margin-bottom: 40px;
+  margin-top: -30px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
 }
@@ -183,7 +183,7 @@ nav ul li a:hover{
     margin-bottom: 30px;
     text-align: center;
     width: 1212px;
-    /* min-height: 930px; */
+    min-height: 930px; 
     animation: 4.0s cubic-bezier(.25, 1, .30, 1) wipe-in-bottom-right both;
     background-color: rgba(243, 242, 242, 0.555);
     box-shadow: 15px 15px rgba(236, 236, 236, 0.589);
@@ -244,47 +244,75 @@ h3 {
   margin-bottom: 10px;
 }
 
-/* contacto */
 
-form {
-    max-width: 25%;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
+
+
+
+
+
+
+/* contacto */
   
   label {
     display: block;
     margin-bottom: 5px;
   }
-  
-  input {
-    width: 75%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #2ba977;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #128155;
-  }
-  
+
+
+ /* Estilos para el formulario de contacto y crear articulo */
+ .formArt form {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 5px;
+  padding-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: rgba(236, 236, 236, 0.808);
+}
+
+.formArt input,
+.formArt textarea,
+.formArt select {
+  resize: none;
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+  font-size: 14px;
+  background-color: rgba(248, 247, 247, 0.986);
+}
+
+.formArt select {
+  width: 80%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+  font-size: 16px;
+  color: #555;
+}
+
+.formArt input[type="submit"] {
+  background-color: #2ba977;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.formArt input[type="submit"]:hover {
+  background-color: #05e78d;
+}
+
+
+
+
+
 
 
 
@@ -342,39 +370,50 @@ form {
   text-align: left;
   margin: 0 auto;
   width: 45%;
-  
 }
 
-.listCont ul li{
+.listCont article{
   overflow: auto;
   padding: 10px;
   background-color: #e4dfdfda;
   list-style-type: none;
   border: 1px solid black;
   margin-bottom: 5px;
+  min-height: 100px;
 }
 
-.listCont li p {
-  display: inline;
+.listCont article p {
+  display: block;
+  padding-top: 10px;
   margin: 0;
   margin-right: 2px;
   color: #128155;
-  font-weight: bold;
+  font-weight: bold;;
 }
 
-.listCont li .deleteB {
+.listCont article .deleteB {
   top: 0;
   float: right;
   width: 50px; 
 }
 
+.listCont img{
+  display: block;
+  top: 0;
+  float: left;
+  margin: 2px 20px 0px 0px;
+  max-width: 160px;
+  border: 1px solid rgba(0, 0, 0, 0.171);
+  border-radius: 10px;
+  min-height: 160px;
+  object-fit: cover;
+}
 
 
 
 /* boton eliminar */
 
 .deleteB {
-  display: inline-block;
   padding: 8px 16px;
   background-color: #f44336;
   color: white;
@@ -384,6 +423,7 @@ form {
   text-decoration: none;
   font-size: 14px;
   cursor: pointer;
+
 }
 
 .deleteB:hover {
@@ -392,4 +432,20 @@ form {
 
 .deleteB:active {
   background-color: #b71c1c;
+}
+
+
+
+.rojo {
+  color:#cc0000;
+  box-shadow: 0px 0px 4px black;
+}
+
+.message{
+  padding: 20px;
+  background: #2ba977;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 600;
 }

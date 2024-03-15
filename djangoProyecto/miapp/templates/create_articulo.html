@@ -1,0 +1,27 @@
+{%extends 'layoutC.html'%}
+{% load static %}
+
+{%block title%}
+    Formulario
+{%endblock%}
+
+{%block content%}
+<h2 class="title">Formulario de articulos de mi blog</h2>
+<br>
+
+<div class="formArt">
+    <form action="{% url 'save'%}" methid="get">
+        <label for="title">Titulo de articulo</label>
+        <input type="text" name="title" placeholder="Ingrese el titulo">
+        <label for="content">Contenido de articulo</label>
+        <textarea name="content" row="5"></textarea>
+        <label for="public">¿Publicado?</label>
+        <select name="public">
+            <option value="1">Si</option>
+            <option value="0">No</option>
+        </select>
+        <input type="submit" value="Guardar">
+
+    </form>
+</div>
+{% endblock %}

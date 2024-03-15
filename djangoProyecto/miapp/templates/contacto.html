@@ -7,7 +7,7 @@
 {%endblock%} 
 {% block content %}
 
-<p> {{"Creado por Miguel Bm Dev"}} </p>
+{% comment %} <p> {{"Creado por Miguel Bm Dev"}} </p>
 <p>{{texto|default:"No me crean"}} </p>
 <p>{{letra|first}} </p>
 <p>{{letra|last}} </p>
@@ -18,27 +18,20 @@
 <p>{{'Colombia'| lower}} </p>
 <p>{{letra|random}} </p>
 <p>{{'<h1>hola </h1>'| striptags}} </p>
-<p>{{'lor emda sdas sasasd asdasdas asd asdad dasd'| wordcount}} </p>
+<p>{{'lor emda sdas sasasd asdasdas asd asdad dasd'| wordcount}} </p> {% endcomment %}
 
 <h2>Contactanos</h2>
-
-<form class="minimalist-form">
-    <div class="form-group">
+<div class="formArt">
+    <form >
         <label for="nombreCompleto">Nombre Completo</label>
-        <input type="text" class="form-control" id="nombreCompleto" placeholder="Nombre Completo">
-    </div>
-    <div class="form-group">
+        <input type="text" id="nombreCompleto" placeholder="Nombre Completo">
         <label for="correoElectronico">Correo Electrónico</label>
-        <input type="email" class="form-control" id="correoElectronico" placeholder="name@example.com">
-    </div>
-    <div class="form-group">
+        <input type="email" id="correoElectronico" placeholder="name@example.com">
         <label for="edad">Edad</label>
-        <input type="number" class="form-control" id="edad" placeholder="Edad">
-    </div>
-    <div class="form-group">
+        <input type="number" id="edad" placeholder="Edad">
         <label for="celular">Numero de Celular</label>
-        <input type="tel" class="form-control" id="celular" placeholder="Numero de Celular">
-    </div>
-    <button type="button" class="btn btn-primary">Enviar</button>
-</form>
+        <input type="tel" id="celular" placeholder="Numero de Celular">
+        <input type="submit" value="Enviar">
+    </form>
+</div>
 {% endblock %}
